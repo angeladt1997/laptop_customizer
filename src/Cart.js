@@ -1,7 +1,7 @@
   
 import React, { Component } from 'react';
 
-import UpdateCart from '/UpdateCart';
+import UpdateCart from './UpdateCart';
 import Total from '/Total';
 
 export default class Cart extends Component {
