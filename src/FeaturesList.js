@@ -1,5 +1,5 @@
 import React from 'react';
-import FeatureOptions from './FeatureOptions/FeatureOptions';
+import FeatureOptions from './FeatureOptions';
 
 export default class FeaturesList extends React.Component {
   render() {
