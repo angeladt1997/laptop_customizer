@@ -48,7 +48,7 @@ class App extends Component {
       >
         <Header />
         <main>
-          <FeatureList 
+          <FeaturesList 
             features={this.props.features}
             selected={this.state.selected}
             onSelect={this.updateFeature}
