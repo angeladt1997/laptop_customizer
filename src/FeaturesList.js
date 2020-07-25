@@ -1,7 +1,7 @@
 import React from 'react';
 import FeatureOptions from './FeatureOptions/FeatureOptions';
 
-export default class Features extends React.Component {
+export default class FeaturesList extends React.Component {
   render() {
     const options = this.props.options.map((item, index) => {
       const selectedClass = item.name === this.props.selected[this.props.name].name ? "feature_selected" : "";

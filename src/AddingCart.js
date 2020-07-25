@@ -17,3 +17,5 @@
       (acc, curr) => acc + this.state.selected[curr].cost,
       0
     );
+
+    

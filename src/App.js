@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Header from './Header';
-import FeatureList from './FeatureList';
-import Cart from '.Cart';
+import FeaturesList from './FeaturesList';
+import Cart from './Cart';
 import FEATURES from './FEATURES'
 
 class App extends Component {
