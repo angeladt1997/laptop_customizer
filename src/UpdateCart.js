@@ -1,20 +1,35 @@
+import React from 'react';
 
-import React, { Component } from 'react';
+// Normalizes string as a slug - a string that is safe to use
+// in both URLs and html attributes
+import slugify from 'slugify';
+import Selector from './selector';
 
-export default class UpdateCart extends Component {
-  render(){
-    return(
-      Object.keys(this.props.selected).map(key => {
-        return (
-          <div className="summary__option" key={key}>
-            <div className="summary__option__label">{key} </div>
-            <div className="summary__option__value">{this.props.selected[key].name}</div>
-            <div className="summary__option__cost">
-            { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'}).format(this.props.selected[key].cost) }
-            </div>
-          </div>
-        )
-      })
-    )
+export default class UpdateCart extends React.Component {
+  render() {
+    const features = Object.keys(this.props.features).map((feature, idx) => {
+      const featureHash = feature + '-' + idx;
+      const options = this.props.features[feature].map(item => {
+        const itemHash = slugify(JSON.stringify(item));
+        return (<Selector key={itemHash}
+          item={item}
+          itemHash={itemHash}
+          feature={feature}
+          options={this.props.options}
+          onChange={this.props.onChange} />
+        );
+      });
+
+      return (
+        <fieldset className="feature" key={featureHash}>
+          <legend className="feature__name">
+            <h3>{feature}</h3>
+          </legend>
+          {options}
+        </fieldset>
+      );
+    });
+
+    return (<div><h2>Customize your laptop:</h2>{features}</div>);
   }
 }
