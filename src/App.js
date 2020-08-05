@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './headers';
-import UpdateCart from './updateCart';
-import Cart from './cart';
+import UpdateCart from './UpdateCart';
+import Cart from './Cart';
 
 
 import './App.css';
