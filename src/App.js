@@ -3,8 +3,8 @@ import Main from './Main';
 import Total from './Total';
 //import FeatureOptions from './FeatureOptions'
 
-import Header from './headers';
-import UpdateCart from './UpdateCart';
+import Header from './Headers';
+
 import Cart from './Cart';
 
 
