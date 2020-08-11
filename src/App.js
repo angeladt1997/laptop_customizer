@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import Main from './Main';
 import Total from './Total';
 //import FeatureOptions from './FeatureOptions'
