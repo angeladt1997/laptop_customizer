@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
+import Main from './Main';
+import Total from './Total';
+//import FeatureOptions from './FeatureOptions'
+=======
 import Header from './headers';
 import UpdateCart from './UpdateCart';
 import Cart from './Cart';
 
 
+>>>>>>> e3e3c5843b099a327f3a801da6ec6efda57fab72
 import './App.css';
 
-class App extends Component {
+const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD'
+});
+
+export default class App extends Component {
   state = {
     selected: {
       Processor: {
@@ -36,23 +47,16 @@ class App extends Component {
     });
   };
 
-  render() {      
+  render() {
+    const selected = this.state.selected;
+    const total = Total(selected);
     return (
-      <div className="App">
-        <Header/>
-        <main>
-          <form className="main__form">
-            <UpdateCart features={this.props.features}
-             options={this.state.selected}
-              onChange={this.updateFeature}/>            
-          </form>
-          <section className="main__summary">
-            <Cart options={this.state.selected}/>            
-          </section>
-        </main>
-      </div>
-    );
+        <Main 
+            selected={selected} 
+            total={total} 
+            USCurrencyFormat={USCurrencyFormat} 
+            updateFeature={this.updateFeature} 
+        />
+    )
   }
 }
-
-export default App;
