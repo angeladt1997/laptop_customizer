@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import Main from './Main';
 import Total from './Total';
 //import FeatureOptions from './FeatureOptions'
-=======
+
 import Header from './headers';
 import UpdateCart from './UpdateCart';
 import Cart from './Cart';
 
 
->>>>>>> e3e3c5843b099a327f3a801da6ec6efda57fab72
 import './App.css';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
