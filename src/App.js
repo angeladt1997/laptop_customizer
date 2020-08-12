@@ -3,7 +3,7 @@ import Main from './Main';
 import Total from './Total';
 //import FeatureOptions from './FeatureOptions'
 
-import Header from './Headers';
+import Header from './Header';
 
 import Cart from './Cart';
 
