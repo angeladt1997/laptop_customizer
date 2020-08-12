@@ -3,9 +3,9 @@ import Main from './Main';
 import Total from './Total';
 //import FeatureOptions from './FeatureOptions'
 
-import Header from './Header';
+//import Header from './Header';
 
-import Cart from './Cart';
+//import Cart from './Cart';
 
 
 import './App.css';
