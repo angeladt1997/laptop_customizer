@@ -1,17 +1,23 @@
 import React from 'react';
+import slugify from 'slugify';
+import USCurrencyFormat from './USCurrencyFormat';
 
-export default class Feature extends React.Component
-{
-    render()
-    {
-        const {feature, featureHash, options} = this.props;
-        return (
-            <fieldset className="feature" key={featureHash}>
-              <legend className="feature__name">
-                <h3>{feature}</h3>
-              </legend>
-              {options}
-            </fieldset>
-          );
-    }
+
+export default function FeatureOption(props){
+  return (
+    <div key={props.itemHash} className="feature__item">
+      <input
+        type="radio"
+        id={props.id}
+        className="feature__option"
+        name={slugify(props.name)}
+        checked={props.checked}
+        onChange={props.onChange}
+      />
+      <label htmlFor={props.id} className="feature__label">
+        {props.name} ({USCurrencyFormat.format(props.cost)})
+      </label>
+    </div>
+  );
+  
 }
